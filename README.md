@@ -180,15 +180,26 @@ Feature importance analysis also showed that medical indicators such as HbA1c le
 
 ### Experiment 3
 
-Classification Report:
-              precision    recall  f1-score   support
+### Classification Report
 
-         0.0       0.98      0.97      0.98     14640
-         1.0       0.72      0.80      0.76      1360
+The confusion matrix summarizes the classification performance of the final Random Forest model. It shows the number of correctly and incorrectly classified instances for both classes. The model achieves excellent performance on the majority class (healthy patients) while maintaining a strong recall for the minority class (diabetic patients).
 
-    accuracy                           0.96     16000
-   macro avg       0.85      0.89      0.87     16000
-weighted avg       0.96      0.96      0.96     16000
+This is the best-performing model obtained throughout the experiments. Considering the class imbalance, the achieved results demonstrate a good balance between overall accuracy and the ability to detect diabetic patients. However, further improvements are likely to require a larger and more balanced dataset. Increasing the number of positive (diabetes) cases would provide the model with more representative examples, helping it learn more robust decision boundaries and further reduce the number of False Negatives.
+
+| Class | Precision | Recall | F1-score | Support |
+|------:|----------:|-------:|---------:|--------:|
+| 0 (Healthy) | 0.98 | 0.97 | 0.98 | 14,640 |
+| 1 (Diabetes) | 0.72 | 0.80 | 0.76 | 1,360 |
+
+| Metric | Value |
+|--------|------:|
+| **Accuracy** | **0.96** |
+| **Macro Average Precision** | 0.85 |
+| **Macro Average Recall** | 0.89 |
+| **Macro Average F1-score** | 0.87 |
+| **Weighted Average Precision** | 0.96 |
+| **Weighted Average Recall** | 0.96 |
+| **Weighted Average F1-score** | 0.96 |
 
 
 ![Experiment 3 - Confusion metrix](reports/figures/experiment_3_025_th.png)
