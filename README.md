@@ -178,4 +178,4 @@ Threshold tuning further improved the model's ability to identify diabetic patie
 
 Feature importance analysis also showed that medical indicators such as HbA1c level and blood glucose level have the greatest influence on model predictions.
 
-
+![Experiment 3 - Confusion metrix](reports/figures/experiment_3_025_th.png)
