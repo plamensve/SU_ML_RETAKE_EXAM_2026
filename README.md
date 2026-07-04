@@ -191,15 +191,5 @@ This is the best-performing model obtained throughout the experiments. Consideri
 | 0 (Healthy) | 0.98 | 0.97 | 0.98 | 14,640 |
 | 1 (Diabetes) | 0.72 | 0.80 | 0.76 | 1,360 |
 
-| Metric | Value |
-|--------|------:|
-| **Accuracy** | **0.96** |
-| **Macro Average Precision** | 0.85 |
-| **Macro Average Recall** | 0.89 |
-| **Macro Average F1-score** | 0.87 |
-| **Weighted Average Precision** | 0.96 |
-| **Weighted Average Recall** | 0.96 |
-| **Weighted Average F1-score** | 0.96 |
-
 
 ![Experiment 3 - Confusion metrix](reports/figures/experiment_3_025_th.png)
