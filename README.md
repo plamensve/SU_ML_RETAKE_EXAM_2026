@@ -57,6 +57,7 @@ SU_ML_RETAKE_EXAM_2026
 │   ├── 02_eda.ipynb
 │   ├── 03_feature_engineering.ipynb
 │   └── 04_modeling.ipynb
+│   └── 05_alternative_modeling.ipynb
 │
 ├── reports
 │   └── figures
@@ -193,3 +194,17 @@ This is the best-performing model obtained throughout the experiments. Consideri
 
 
 ![Experiment 3 - Confusion metrix](reports/figures/experiment_3_025_th.png)
+
+### Working with CatBoost Model to Check the Results / 05_alternative_modeling.ipynb
+
+In this part of the notebook, we trained a CatBoost classification model to evaluate how well it performs on the diabetes prediction task.
+
+We first initialized the model with a minimal set of parameters in order to establish a baseline before further hyperparameter tuning.
+
+The main focus was not only overall accuracy, but especially the model’s ability to correctly detect patients with diabetes. Since **Class 1 represents diabetic patients**, **Recall for Class 1** was treated as the most important metric.
+
+The model was evaluated on both the validation and test datasets. The results showed a clear trade-off between **Precision** and **Recall**. On the validation dataset, the model achieved very high precision for Class 1, but missed a larger number of diabetic patients. On the test dataset, the recall for Class 1 improved, meaning the model detected more diabetic patients, although this came with more false positive predictions.
+
+Overall, the CatBoost model showed promising results for this classification task. Since the main goal is to minimize false negatives, the version with higher recall for Class 1 is more suitable for the project objective.
+
+![Alternative modeling with Catbookst model](reports/figures/catboost_results.png)
